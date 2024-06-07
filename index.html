@@ -4,95 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/main.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <div class="container">
 
-    <img src="/images/logo.svg" alt="image logo" class="calculator__logo">
+    <img src="/images/logo.svg" alt="image logo" class="logo">
 
-    <div class="calculator__content">
+    <form class="calculator-form">
 
-      <form class="calculator__form">
+      <section class="calculator-form__inputs">
 
-        <section class="form__leftContent">
+        <div class="form-group form-group--bill">
 
-          <div class="form-group">
+          <label for="bill">Bill</label>
 
-            <label for="bill">Bill</label>
-
-            <div class="form__bill">
-              <img src="/images/icon-dollar.svg" alt="dollar icon" class="icon">
-              <input type="number" id="bill">
-            </div>
-            
+          <div class="input-wrapper input-wrapper--bill">
+            <img src="/images/icon-dollar.svg" alt="dollar icon" class="icon">
+            <input type="text" id="bill" placeholder="0">
           </div>
-  
-          <div class="form-group">
-            
-            <label for="custom"> Select Tip %</label>
-            
-            <div class="form__tips">
-
-              <button class="tip">5%</button>
-              <button class="tip">10%</button>
-              <button class="tip">15%</button>
-              <button class="tip">25%</button>
-              <button class="tip">50%</button>
-
-              <input type="number" name="custom" id="custom" class="tip">
-
-            </div>
-            
-          </div>
-  
-          <div class="form-group">
-
-            <label for="numberOfPeople">Number of People</label>
-
-            <div class="form__numberOfPeople">
-              <img src="/images/icon-person.svg" alt="person icon" class="icon">
-              <input type="number" id="numberOfPeople">
-            </div>
-
-          </div>
-
-        </section>
-
-        <section class="form__rightContent">
-
-          <div class="form-group">
-
-            <label for="tipAmount">Tip Amount<br><span>/ person</span></label>
-              <input type="text" id="tipAmount">
-          </div>
-
-          <div class="form-group">
-
-            <label for="totalAmount">Total<br><span>/ person</span></label>
-              <input type="text" id="totalAmount">
-          </div>
-
-          <button type="reset" id="resetButton">Reset</button>
           
-        </section>
+        </div>
+  
+        <div class="form-group form-group--tips">
+            
+          <label for="custom">Select Tip %</label>
+            
+          <div class="input-wrapper input-wrapper--tips">
 
-      </form>
-    </div>
+            <button class="tip-button" id="tip-five">5%</button>
+            <button class="tip-button" id="tip-ten">10%</button>
+            <button class="tip-button" id="tip-fifteen">15%</button>
+            <button class="tip-button" id="tip-twenty-five">25%</button>
+            <button class="tip-button" id="tip-fifty">50%</button>
+
+            <input type="text" name="custom" id="custom" class="tip-input" placeholder="Custom">
+
+          </div>
+            
+        </div>
+  
+        <div class="form-group form-group--people">
+
+          <label for="numberOfPeople">Number of People</label>
+
+          <div class="input-wrapper input-wrapper--people">
+            <img src="/images/icon-person.svg" alt="person icon" class="icon">
+            <input type="text" id="numberOfPeople" placeholder="0">
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="calculator-form__results">
+
+        <div class="form-group form-group--tipAmount">
+
+          <p class="label"><strong>Tip Amount</strong><br><span>/ person</span></p>
+          <p class="result" id="tipAmount">$0.00</p>
+        </div>
+
+        <div class="form-group form-group--totalAmount">
+
+          <p class="label"><strong>Total</strong><br><span>/ person</span></p>
+          <p class="result" id="totalAmount">$0.00</p>
+        </div>
+
+        <button type="reset" id="resetButton">Reset</button>
+          
+      </section>
+
+      <div class="attribution">
+       <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></span>.
+        Coded by <a href="#"> Larose IKITAMA</a>
+      </div>
+    </form>
   </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
