@@ -17,7 +17,7 @@
 
     <img src="/images/logo.svg" alt="image logo" class="logo">
 
-    <form class="calculator-form" id="form" novalidate>
+    <form method="post" class="calculator-form" id="form" novalidate>
 
       <section class="calculator-form__inputs">
 
@@ -38,11 +38,11 @@
             
           <div class="input-wrapper input-wrapper--tips">
 
-            <button class="tip-button" id="tip-five">5%</button>
-            <button class="tip-button" id="tip-ten">10%</button>
-            <button class="tip-button" id="tip-fifteen">15%</button>
-            <button class="tip-button" id="tip-twenty-five">25%</button>
-            <button class="tip-button" id="tip-fifty">50%</button>
+            <button type="button" class="tip-button" id="tip-five">5%</button>
+            <button type="button" class="tip-button" id="tip-ten">10%</button>
+            <button type="button" class="tip-button" id="tip-fifteen">15%</button>
+            <button type="button" class="tip-button" id="tip-twenty-five">25%</button>
+            <button type="button" class="tip-button" id="tip-fifty">50%</button>
 
             <input type="text" name="custom" id="custom" class="tip-input" placeholder="Custom">
 
@@ -77,7 +77,7 @@
           <p class="result" id="totalAmount">$0.00</p>
         </div>
 
-        <button type="reset" id="resetButton">Reset</button>
+        <button type="button" id="resetButton" disabled>Reset</button>
           
       </section>
 

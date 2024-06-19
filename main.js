@@ -8,9 +8,28 @@ const inputCustom = document.getElementById('custom');
 
 const form = document.getElementById('form');
 
+const resetButton = document.getElementById('resetButton');
+
+const tipList = document.querySelectorAll('.tip-button');
+
+const tipFive = document.getElementById("tip-five");
+const tipTen = document.getElementById("tip-ten");
+const tipFifteen = document.getElementById("tip-fifteen");
+const tipTwentyFive = document.getElementById("tip-twenty-five");
+const tipFifty = document.getElementById("tip-fifty");
+
+const tips = {
+    "tip-five": 5,
+    "tip-ten": 10,
+    "tip-fifteen": 15,
+    "tip-twenty-five": 25,
+    "tip-fifty": 50
+}
+
 /* Initialisation */
 
 setupInputClickHandlers(inputList);
+setInputCustomValue();
 /* form.addEventListener('submit', validateForm);
  */
 function setupInputClickHandlers(inputs) {
@@ -19,14 +38,11 @@ function setupInputClickHandlers(inputs) {
             removeAllBorders();
             setBorder(getWrapper(input.id));
             enableRealTimeValidation(input);
-
         });
         input.addEventListener('blur', () => {
             validateForm();
         });
     });
-
-
 }
 
 function removeAllBorders() {
@@ -60,6 +76,7 @@ function validateField(input) {
     if (!isValid) {
         if (input.id === 'custom') {
             setBorderError(input);
+            validateForm();
         } else {
             setBorderError(wrapper);
         }
@@ -108,8 +125,10 @@ function validateForm() {
         const { tipAmountPerPerson, totalAmountPerPerson } = calculateTipAndTotal(bill, customTip, numberOfPeople);
 
         updateResults(tipAmountPerPerson, totalAmountPerPerson);
-    }else{
+        showResetButton();
+    } else {
         resetResults();
+        hiddenResetButton();
     }
 }
 
@@ -155,6 +174,51 @@ function calculateTipAndTotal(bill, tipPercentage, numberOfPeople) {
         tipAmountPerPerson: tipAmountPerPerson.toFixed(2),
         totalAmountPerPerson: totalAmountPerPerson.toFixed(2)
     };
+}
+
+function showResetButton() {
+    resetButton.style.background = 'hsl(172, 67%, 45%)';
+    resetButton.style.color = '#FFFFFF';
+    resetButton.removeAttribute('disabled');
+}
+
+function hiddenResetButton() {
+    resetButton.style.background = "#0d686d";
+    resetButton.style.color = "#00474b";
+    resetButton.setAttribute("disabled", "disabled");
+}
+
+resetButton.addEventListener('click', () => {
+    /* const formValues = getFormValues();
+
+    if (formValues) {
+        
+    } else {
+        
+    } */
+    form.reset();
+    inputCustom.setAttribute("value", "");
+    resetResults();
+    hiddenResetButton();
+});
+
+
+
+
+function setInputCustomValue() {
+    tipList.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            for (const key in tips) {
+
+                if (key == button.id) {
+                    inputCustom.setAttribute("value", tips[key]);
+                    validateForm();
+                    break
+                }
+            }
+        })
+    });
 }
 
 
