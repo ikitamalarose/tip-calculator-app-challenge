@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="stylesheet" href="/main.css">
+  <script defer type="module" src="/main.js"></script>
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -16,24 +17,24 @@
 
     <img src="/images/logo.svg" alt="image logo" class="logo">
 
-    <form class="calculator-form">
+    <form class="calculator-form" id="form" novalidate>
 
       <section class="calculator-form__inputs">
 
         <div class="form-group form-group--bill">
 
-          <label for="bill">Bill</label>
+          <label for="bill">Bill <span class="error-message" id="error-bill"></span></label>
 
           <div class="input-wrapper input-wrapper--bill">
             <img src="/images/icon-dollar.svg" alt="dollar icon" class="icon">
-            <input type="text" id="bill" placeholder="0">
+            <input type="text" id="bill" placeholder="0" name="bill">
           </div>
           
         </div>
   
         <div class="form-group form-group--tips">
             
-          <label for="custom">Select Tip %</label>
+          <label for="custom">Select Tip %<span class="error-message" id="error-custom"></span></label>
             
           <div class="input-wrapper input-wrapper--tips">
 
@@ -51,11 +52,11 @@
   
         <div class="form-group form-group--people">
 
-          <label for="numberOfPeople">Number of People</label>
+          <label for="people">Number of People<span class="error-message" id="error-people"></span></label>
 
           <div class="input-wrapper input-wrapper--people">
             <img src="/images/icon-person.svg" alt="person icon" class="icon">
-            <input type="text" id="numberOfPeople" placeholder="0">
+            <input type="text" id="people" placeholder="0" name="people">
           </div>
 
         </div>
