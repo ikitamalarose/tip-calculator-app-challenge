@@ -64,7 +64,6 @@ function enableRealTimeValidation(input) {
 }
 
 function validateField(input) {
-    /*  const input = event.target; */
     const value = input.value;
     const wrapper = input.closest('.input-wrapper');
     const errorMessage = document.getElementById(`error-${input.id}`);
@@ -74,7 +73,6 @@ function validateField(input) {
     if (!isValid) {
         if (input.id === 'custom') {
             setBorderError(input);
-            /* validateForm(); */
         } else {
             setBorderError(wrapper);
         }
