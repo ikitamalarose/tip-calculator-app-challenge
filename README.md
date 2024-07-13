@@ -12,7 +12,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
   - [Author](#author)
 
 ## Overview
@@ -27,39 +26,22 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Tip calculator app coding challenge](./design/desktop-design.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL : [Click to see the repository](https://github.com/ikitamalarose/tip-calculator-app-challenge.git)
+- Live Site URL : [Click to go to the online site](https://tip-calculator-app-challenge-orpin.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5 
+- CSS
 - Flexbox
 - CSS Grid
 - JavaScript
-- [React](https://reactjs.org/) - JS library
-
-### What I learned
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 ## Author
 
