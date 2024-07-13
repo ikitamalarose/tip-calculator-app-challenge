@@ -99,6 +99,10 @@ body {
         height: 0.966rem;
     }
 
+    .active-button{
+        background: #26C2AE;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -479,7 +483,6 @@ body {
 
         background: var(--Very-dark-cyan);
         border-radius: 0.938rem;
-        /* padding: 2.5rem; */
         height: 26.063rem;
     }
 
