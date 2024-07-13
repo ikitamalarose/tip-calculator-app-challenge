@@ -346,6 +346,9 @@ body {
         color: #00474b;
     }
 
+    .active-button{
+        background: #26C2AE;
+    }
     .container {
         display: flex;
         flex-direction: column;
