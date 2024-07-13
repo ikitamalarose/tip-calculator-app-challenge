@@ -33,7 +33,9 @@ function setupInputClickHandlers(inputs) {
     inputs.forEach(input => {
         input.addEventListener('focus', () => {
             removeAllBorders();
-            removeAllActiveButtons();//ajouter
+            if (input.id=="custom") {
+                removeAllActiveButtons();//ajouter
+            }
             setBorder(getWrapper(input.id));
             enableRealTimeValidation(input);
         });
@@ -176,6 +178,7 @@ function showResetButton() {
     resetButton.style.background = '#26C2AE';
     resetButton.style.color = '#00474B';
     setHoverToResetButton();
+    removeAllActiveButtons();
     resetButton.removeAttribute('disabled');
 }
 
